@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="hnstyle.css" type="text/css" rel="stylesheet">
+ <style>
+ 	a{text-decoration: none;}
+ </style>
+     <!--jQurey 설치코드-->
+  	 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  
+ <script src="hn_lib.js">
+ </script>
+
+</head>
+<body onload="init()">
+<header>
+	<h2 id="hi">Welcome to my place📽️</h2>
+	<h4>
+		<input type="button" value="on mouse here!" onmouseover="changeStyleT()"  onmouseover="revertO()">
+	    <button onclick="welcomeMsg()">환영인사👋🏻</button>
+	</h4>
+	<hr>
+	<h6>*Today's BGM ♪(turn on plz)</h6>
+	<iframe width="150" height="100" src="https://www.youtube.com/embed/TH60G-A-7MU" title="[Playlist] 카페에서 듣는 음악 🍮 | 저작권 없는 무료브금 | No copyright music" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<h4 class ="test1">이 부분은 jquery로 작성</h4>
+	<img class="test_img" src="h.media/양양.jpg" alt="기존 이미지" width="500px" height="500px">
+</header>
+       <hr>
+		<nav>
+			<h4 id="PostList">&lt;목차(onmouse here!)&gt;</h4>
+			<ul>
+			   <li><a href="#Me">Me</a><br>
+			   <li><a href="#music">music</a><br>
+		       <li><a href="#travel">여행&버킷리스트</a><br>
+		       <li><a href="#mini">미니어처 diy 하우스</a><br>
+		       <li><a href="#Skorea">국내 여행지</a>
+		   </ul>
+		</nav>
+
+		<aside>
+			<iframe src="invitefoam.html" name="l
+			             "width="250" height="200">
+			</iframe>
+		</aside>
+	</div>
+
+<section>
+	<article id="Me">
+	 <h4>About Me</h4>
+	 <ul>
+		 <h5>
+		 	<!--이벤트 디폴트 행동 취소 효과 추가-->
+		 	<li><a href="삭제됨" onclick="return query()">My Blog이동하시겠나요?</a>
+		 	<hr><form> 
+		 		<input type="checkbox">yes(체크됨)<br>
+		 		<input type="checkbox" onclick="NoAction(event)">no(체크 안됨)</form>
+		 	</li><hr>
+		 <details>
+		 	<summary>My mbti</summary>
+		 	<p>저의 MBTI는 <span>INTP입니다.</span><br>
+		 	   나가서 노는 것도 좋지만 집에 있는 걸 좋아합니다(✿◕‿◕✿)</p>
+		 </details>
+		 <details>
+		 	<summary>좋아하는 음식</summary>
+		 	<p>탕수육,햄버거,피자,브리또,타코,멜론</p>
+		 </details>
+		 <details>
+		 	<summary>Major</summary>
+		 	<pre>
+		 	 저의 전공은 <span>컴퓨터공학과</span>입니다.
+		     덕분에 요즘 코딩에 관심이 많습니다.
+		 	 현재 C언어,파이썬,HTML&CSS&JS에 대해 배우고 있습니다.
+		     저만의 웹 페이지를 만들게 되어 재밌고 뿌듯합니다*^o^*</pre>
+		 </details>
+		 <details>
+		 	<summary>My Dream</summary>
+		 	<p>저의 꿈은 다양합니다~!<br>
+		 		1.개발자<br>
+		 		2.카페 사장<br>
+		 		3.여행가
+		 </details>
+		 <details>
+		 	<summary>좋아하는 글귀</summary>
+		 	<p><span>잠언 4:23 KRV<br>
+               무릇 지킬만한 것보다 더욱 네 마음을 지키라 생명의 근원이 이에서 남이니라</span></p>
+		 </details>
+
+		</h5></ul>
+		<br>
+		<h4>웹툰</h4>
+        <h5>저는 심심할 때 웹툰을 봅니다! </h5>
+        <h5>추천 웹툰🍏</h5>
+         <button id="loadButton">불러오기</button>
+         <p id="webtoonList"></p>
+		<!--ondbclick 리스너로 계산기 만들기-->
+		<h4>간단한 계산기<h5>(한번 해보세요(●'◡'●))</h5></h4>
+		<form>
+			식<input type="text" id="exp" value=""><br>
+			값<input type="text" id="result" value="">
+			  <input type="button" value="계산(더블클릭)"
+			  ondblclick="calculate();">
+		</form>
+		<br>
+		<!--select객체에서 선택한 과일 출력-->
+		<h4>좋아하는 과일들!🍊</h4>
+		<form>
+		<select id ='fruit' onchange="fruitImage()">
+			<option value="h.media/오렌지.jpg">오렌지
+			<option value="h.media\멜론.jpg">멜론
+			<option value="h.media/무화과.jpg">무화과
+			<option value="h.media/딸기&체리.jpg">딸기&체리
+			<option value="h.media/수박.jpg">수박</option>
+		</select>
+		<img id ="fruite_img" src="h.media/오렌지.jpg" alt="."
+		style="width:400px;height:400px";></form>
+
+	</article>
+	<article id="music">
+	<h4>♡좋아하는 음악들♡</h4>
+
+
+	<h5>[좋아하는 음악장르를 선택해주세요💿]</h5>
+	<form>
+		<input type ="radio" name="musicG" value="ZAZZ" checked> 재즈 
+		<input type ="radio" name="musicG" value="POP">팝
+		<input type ="radio" name="musicG" value="hiphop">힙합
+		<input type ="button" value="find checked" onclick="findChecked()"></form>
+	<ul>
+		<h5><li>Breezy__Hamel</li>
+		<li><a href="https://youtu.be/3jLj4peuSu4">Down For You__Eric Nam</li>
+		<li><a href="https://youtu.be/74_yqNBhQbA">Antifreeze__백예린</a></li>
+		<li>Don't Look Back IN Anger__Oasis</li>
+		<li>Drive It Like You Stole It__Sing Street</li>
+		<li><a href="https://youtu.be/Tfa6fRjPlUE">Mas Que Nada(Feat.The BLack Eyed Peas)__Serigo Mendes</a></h5></ul>
+    <h4>오늘의 추천곡♪</h4>
+    <ul>
+		<h5><li>September__Earth,Wind&Fire</li>
+		<li>Cupid__FIFTY FIFTY</li>
+		<li><a href="https://youtu.be/KA9kSBv1QrI">Confidence__Sanctus Real</a></li>
+		<li><a href="https://youtu.be/4NLsPTkBTdU"><span>Softly_Kyle Lux</span></a></li></h5></ul>
+	</article>
+	<hr>
+	<br><br>
+	<article id="travel">
+		<table border="1" >
+			<caption><h3>[해외여행 버킷리스트✈️]<br>
+				<!--태그 이름으로 DOM객체 찾기-->
+				<button onclick="spanChange()">여길 눌러보세요!(click)</button></h3></caption>
+			<thead>
+				<tr><th>순위</th><th>가고싶은 여행지</th><th>하고 싶은 것</th><th>꼭 먹어야 되는 음식</th></tr>
+			</thead>
+			<tfoot>
+				<tr><th>score</th><th>place</th><th>To do</th><th>Eat</th></tr>
+			</tfoot>
+			<tbody>
+				<tr><td>1 </td><td><span>프라하</span></td><td>카를교에서 석양보기</td><td>굴뚝빵,핫초코🍫</td></td></tr>
+
+				<tr><td>2 </td><td>뉴욕</td><td><span>브루클린교 밑에서 브99 사진찍기</span>,자전거 타고 센트럴파크 산책하기</td><td>Ess-a-Bagel,버거 인 뉴욕🍔</td></tr>
+
+				<tr><td>3 </td><td>도쿄</td><td>시부야 사거리 건너기,<span>도쿄 타워에서 일몰~야경 보기*</span></td><td>스시🍣,전통차🍵</td></tr>
+
+				<tr><td>4 </td><td>하와이</td><td>물고기랑 수영하기,알로하 춤추기,<span>서핑타기</span>,별 보기</td><td>하와이안 피자🍕,포케🥗,쉐이브 아이스</td></tr>
+
+				<tr><td>5 </td><td><span>니스</span></td><td>니스마켓에서 향수사기,아침에 해변 산책</td><td>Socca(소카),브런치,크루아상🥐</td></tr>
+
+				<tr><td>6 </td><td>코타키나발루</td><td><span>모래사장에서 보사노바 노래 들으면서 누워있기♡</span>,하루종일 수영하기,</td><td>망고스틴,씨푸드 볶음밥</td></tr>
+				<tr><td>7 </td><td>멕시코</td><td>멕시코 타코 먹기🌮, 해변가에서 놀기,쌈바 축제</td><td><span>타코,부리또,나쵸</span></td>
+			</tbody>
+		</table><br><br>
+
+     ▼클릭하면 다음 여행지 이미지가 보여집니다(순서대로)<br><br>
+	<img style ="border:20px ridge pink"
+		src="h.media/프라하.jpg" alt="여행지 사진" width="300" height="200" onclick="PicChange(this)">
+	</article>
+	<br><br><br><br>
+	<hr>
+
+	<article id="mini">
+		<h4>DIY miniature House</h4>
+
+		<div>•What I Made<br>
+			<h5 title="사진출처: 이하늘 사진첩*^^*"><img src="h.media\KakaoTalk_20230415_221032883.jpg"
+				width="120px" height="110px"><br>미니 정원</img><br>
+			<img src="h.media\KakaoTalk_20230415_221033781.jpg"
+			width="120px" height="110px"><br>스시집</img><br>
+			<img src="h.media\KakaoTalk_20230428_183231385.jpg"
+			width="150px" height="110px"><br>크리스마스 별장</img><br>
+			<img src="h.media\KakaoTalk_20230428_183233244.jpg"
+			width="120px" height="110px"><br>액자 속 부엌</img></h5>
+		</div>
+
+		<div>•The process of making<br>
+			<h5 title="사진출처: 이하늘 사진첩*^^*"><img src="h.media\KakaoTalk_20230430_124746839.jpg" width="120px" height="110px"><br></img><br>
+				<img src="h.media\KakaoTalk_20230430_124747809.jpg" width="120px" height="110px"><br></img><br>
+				<img src="h.media\KakaoTalk_20230430_124744801.jpg" width="120px" height="110px"><br></img><br>
+				<img src="h.media\KakaoTalk_20230430_124745871.jpg" width="120px" height="110px"><br></img><br></h5>
+		</div>
+
+		<div>•What I want to make<br>
+		
+			<h5 title="사진출처: 꼬미딜 인스타그램"><img src="h.media\KakaoTalk_20230417_223330735.jpg"width="120px" height="110px"><br><span>파리의 카페</span></img><br>
+			<img src="h.media\KakaoTalk_20230417_223329802.jpg"
+			width="120px" height="110px"><br>산토리니 하우스</img><br>
+			<img src="h.media\KakaoTalk_20230428_181952658.jpg"
+			width="120px" height="110px"><br>눈내린 저택</img><br>
+			<img src="h.media\KakaoTalk_20230428_181952658_01.jpg"width="120px" height="110px"><br>동양풍 대저택</img></h5>
+		</figure>
+		</div>
+		<article id="Skorea">
+			<h4>*국내 여행지*</h4>
+		<ul><h5>제가 가고싶은 국내 여행지도 소개해드리겠습니다^^
+				<li><a href="https://travel.naver.com/domestic/01830/summary">양양</a></li>
+				<li>경주</li>
+				<li><a href="https://travel.naver.com/domestic/14/summary">제주도&&*</a></li>
+				<li>여수</li>
+				<li><a href="https://travel.naver.com/domestic/08/summary">부산</a></li></h5>
+				<li>추천해주실 장소가 있다면 적어주세요!</li>
+				<foam name="foo" method="get" action="https://docs.google.com/spreadsheets/d/1eA1IMwb9tDGXhf2YGn5Jm4097esqFSLUPR_IDRx9ZPU/edit#gid=0">
+				장소:<input type="text" size="10" value="">
+	      <input type="submit" value="Done">
+		</article><br><br>
+	<hr>
+</section>
+</div>
+	<footer>
+		<h5><p>made by __Neul<br>
+		Thank you for visiting!ლ(╹◡╹ლ)</p></h5>
+	</footer>
+  
+</body>
+</html>
+
+
+
+
+		
+
+
+
